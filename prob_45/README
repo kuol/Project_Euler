@@ -1,0 +1,17 @@
+The easiest way to think about this problem is reframe the question as:
+Find n, such as T_n = P_n = H_n (:=y).
+
+We can solve 3 quadratic equations for n respectively, expressed in y.
+We have:
+n_T =(-1+sqrt(1+8y))/2 ~ sqrt(2y)
+n_p =(1+sqrt(1+24y)/6  ~ sqrt(2y/3)
+n_H =(1+sqrt(1+8y))/4  ~ sqrt(1/(2y))
+
+thus, in order to have T_n = P_n = H_n, with n sufficiently large, we have
+roughly: 
+n_T: n_p : n_H = 2: 2/sqrt(3):1
+
+Notice that 285:165:143 roughly satisfy this relation
+
+
+Now we can use this to make our algorithms O(n)
