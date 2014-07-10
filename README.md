@@ -2,5 +2,7 @@ Project_Euler
 =============
 
 The order of code I've finished:
-07/08/2014: Problem 22 easy
-07/09/2014: Problem 45 easy but more chanllenging
+
+  * _07/08/2014_: *Problem 22* (2): easy  
+  * _07/09/2014_: *Problem 45* (3): easy, if you know the math  
+  * _07/09/2014_: *Proglem 15* (4): easy-medium, depends on if you know dynamic programming, pure recursive too slow!
