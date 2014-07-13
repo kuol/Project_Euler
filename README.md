@@ -11,3 +11,4 @@ The order of code I've finished:
                                     test 1110 numbers, but I have problem to come up with a 
                                     more general code that deal with number beyond 1 million.
                                     Maybe recursive algorithm is the way to go...
+  * _07/12/2014_: *Problem 31* (4): medium, Coin change problem
