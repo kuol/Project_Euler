@@ -1,0 +1,16 @@
+Tips:
+
+1. Base case: money = 0 
+   There's another possible base case: money < any left coins.
+   Since *) we order the coins from large to small
+         *) we have coin = 1
+   This base case doesn't apply here, but should be given consideration for other coin 
+   change problems
+
+
+2. Recursive: two options -- take the current largest coin or not, e.g.
+   f(3, [3,2,1]) = f(0, [3,2,1]) + f(3, [2,1])
+
+
+3. Careful for the case that no more coins left, e.g.
+   f(1,[2,1]) = f(1, [1])  --- only one term
