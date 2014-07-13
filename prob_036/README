@@ -1,0 +1,15 @@
+Tips:
+
+1. A binary-based palindrome has to be odd, since you can't count leading zeros.
+
+2. Palindromes == Symetric, for decimal-base palindrome:
+	6 digits: 999,999  --> 5 X 10 X 10
+    5 digits:  99,999  --> 5 x 10 x 10
+    4 digits:   9,999  --> 5 x 10
+    3 digits:     999  --> 5 x 10
+    2 digits:      99  --> 5
+    1 digit:        9  --> 5
+    ------------------------------------
+    Total:             --> 1110
+  
+	thus, we only need to test if the 1110 decimal palindromes are also binary palindromes
