@@ -12,3 +12,4 @@ The order of code I've finished:
                                     more general code that deal with number beyond 1 million.
                                     Maybe recursive algorithm is the way to go...
   * _07/12/2014_: *Problem 31* (4): medium, Coin change problem
+  * _07/15/2014_: *Problem 54* (4): Algorithm is easy, coding,testing is harder. Used unittest module to help
