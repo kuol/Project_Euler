@@ -1,0 +1,10 @@
+Tips:
+
+Think "bottom up".
+
+Suppose the route has reached Row (N-1), which is 99 in our example.
+At this point, the route has to land on one of this (N-1) nodes. 
+What's the best choice out of the (N-1) options?
+
+
+
