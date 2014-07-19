@@ -1,0 +1,23 @@
+The answer is: 2*3*5*7*11*13*17 = 510510
+
+I'm not giving a rigorous proof here, but heuritics that a rigorous proof can base on.
+Imagine the prime numbers are your bomb and number 1,2,..., 1000000 are your targets.
+You mission is to "bomb off" as many targets as possible.
+
+e.g. Bomb 2: can bomb off half of the targets (even numbers)
+	 Bomb 3: bomb off about 1/3 - 1/2*1/3 = 1/6
+     ...
+
+Heristic 1:
+===========
+Apparently the smaller the prime number is, the more powerful it makes the bomb.
+
+Heuristic 2:
+============
+Also notice that, Bomb 4 = 2^2 is as powerful as 2. 
+In fact Bomb 2^d (d>1) is as powerful as 2.
+Since the "fighter jet" can only carry bombs to certain "weight" 
+(bomb1 * bomb2 *...* bombn < 1,000,000 ) we don't want to waste, but want to 
+carry as diverse bombs as possible. 
+
+After several 1, 2 trials, we get the answer easily. 
