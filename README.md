@@ -15,3 +15,4 @@ The order of code I've finished:
   * _07/15/2014_: *Problem 54* (4): Algorithm is easy, coding,testing is harder. Used unittest module to help
   * _07/16/2014_: *Problem 59* (3) easy, if you make educated guess...
   * _07/17/2014_: *Problem 67* (4) Similar to Problem 15 -- think bottom up
+  * _07/18/2014_: *Problem 69* (2) It's a problem that you only need a calculator to solve
