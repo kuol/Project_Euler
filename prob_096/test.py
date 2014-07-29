@@ -1,13 +1,9 @@
 import numpy as np
+from prob_96 import color_print
 
-A = np.array(range(9)).reshape(3,3)
+A = np.array(range(81)).reshape(9,9)
+B = np.copy(A)
+B[4,4], B[4,5], B[4,6] = 0, 0, 0
 
-def modify(A):
-	for i in xrange(3):
-		for j in xrange(3):
-			if A[i,j]%3 == 1:
-				A[i,j] = 0
+color_print(A,B)
 
-print A
-modify(A)
-print A

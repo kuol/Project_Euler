@@ -62,7 +62,7 @@ def update(A,B,C):
 						one_ind.append((i,j))
 						row[i] = row[i].union(temp)
 						col[j] = col[j].union(temp)
-						group[k] = group[k].union(temp)
+						group[k1] = group[k1].union(temp)
 		# update row
 		for j in xrange(9):
 			if j != j1 and B[i1,j]!=10:
