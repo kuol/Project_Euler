@@ -14,7 +14,7 @@ def main():
     # The first axis is "z"
     b = np.array(a).reshape(50,9,9)
     #A = b[44,:,:]
-    A = b[2,:,:]
+    A = b[3,:,:].copy()
     
     sudoku_print(A)
     print
@@ -56,22 +56,27 @@ def sudoku(A):
     while(A.min() == 0):
         if(not conflict):
             i,j = get_leastopt_ind(B)
-            elem = StackElem((i,j), list(C[i][j]), A)
+            elem = StackElem((i,j), list(C[i][j]), A.copy())
             pivot_stack.append(elem)
         else:
             if(len(pivot_stack[-1].choice) > 1):
                 del pivot_stack[-1].choice[0]
             else:
                 del pivot_stack[-1]
-                A = pivot_stack[-1].A
                 del pivot_stack[-1].choice[0]
+            np.copyto(A, pivot_stack[-1].A)
+
         i,j = pivot_stack[-1].ind
+        np.copyto(A_old, A)
+
         A[i,j] = pivot_stack[-1].choice[0]
         conflict = update(A,B,C)
+        
         print "="*30
         print "Update %d" %update_counter
         update_counter = update_counter + 1
-        sudoku_print(A)
+        color_print(A_old,A)
+	#sudoku_print(A)
         
         
 def get_leastopt_ind(B):
