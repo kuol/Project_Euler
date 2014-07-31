@@ -14,15 +14,24 @@ def main():
     # The first axis is "z"
     b = np.array(a).reshape(50,9,9)
     #A = b[44,:,:]
-    A = b[3,:,:].copy()
+    sudoku_sum = 0
+    for i in xrange(50):
+        A = b[i,:,:].copy()
+        sudoku(A)
+        temp = 100*A[0,0] + 10*A[0,1] + A[0,2]
+        sudoku_sum = sudoku_sum + temp
+
+    print "Sum of left top corner digits of all sudoku matrix is: %d" %sudoku_sum
     
-    sudoku_print(A)
-    print
-    sudoku(A)
-    sudoku_print(A)
-    
-    result = "Yes!!" if if_solved(A) else "No :("
-    print "Have I solved this sudoku? " + result
+#    A = b[43,:,:].copy()
+#    
+#    sudoku_print(A)
+#    print
+#    sudoku(A)
+#    sudoku_print(A)
+#    
+#    result = "Yes!!" if if_solved(A) else "No :("
+#    print "Have I solved this sudoku? " + result
     
 
 def sudoku(A):
@@ -45,13 +54,14 @@ def sudoku(A):
    
     A_old = A.copy()
     conflict = update(A,B,C)
-    update_counter = 1
-    print "="*30
-    print "Update %d" %update_counter
-    update_counter = update_counter + 1
+#    update_counter = 1
+#    print "="*30
+#    print "Update %d" %update_counter
+#    update_counter = update_counter + 1
+
     #sudoku_print(A)
 
-    color_print(A_old, A)
+#    color_print(A_old, A)
     #sudoku_print(A)
     while(A.min() == 0):
         if(not conflict):
@@ -62,7 +72,8 @@ def sudoku(A):
             if(len(pivot_stack[-1].choice) > 1):
                 del pivot_stack[-1].choice[0]
             else:
-                del pivot_stack[-1]
+                while(len(pivot_stack[-1].choice) == 1):
+                    del pivot_stack[-1]
                 del pivot_stack[-1].choice[0]
             np.copyto(A, pivot_stack[-1].A)
 
@@ -72,10 +83,10 @@ def sudoku(A):
         A[i,j] = pivot_stack[-1].choice[0]
         conflict = update(A,B,C)
         
-        print "="*30
-        print "Update %d" %update_counter
-        update_counter = update_counter + 1
-        color_print(A_old,A)
+#        print "="*30
+#        print "Update %d" %update_counter
+#        update_counter = update_counter + 1
+#        color_print(A_old,A)
 	#sudoku_print(A)
         
         
