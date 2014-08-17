@@ -1,12 +1,6 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-def main():
-    c1 = Circle((0,0,1))
-    c2 = Circle((0,4-2*np.sqrt(3), 2*np.sqrt(3)-3))
-    c3 = Circle((3-2*np.sqrt(3), np.sqrt(3)-2, 2*np.sqrt(3)-3))
-    son = get_circle(c1,c2,c3)
-
 
 class Circle(object):
     def __init__(self,l= [0]*3):
@@ -27,53 +21,61 @@ class Circle(object):
         plt.show()
 
 def get_circle(c1,c2,c3):
-    x = [c1.x, c2.x, c3.x]
-    y = [c1.y, c2.y, c3.y]
-    r = [c1.r if c1.r!=1 else -c1.r, 
-         c2.r if c2.r!=1 else -c2.r, 
-         c3.r if c3.r!=1 else -c3.r,]
+    xx = [c1.x, c2.x, c3.x]
+    yy = [c1.y, c2.y, c3.y]
+    rr = [c1.r if c1.r!=1 else -c1.r, c2.r if c2.r!=1 else -c2.r, c3.r if c3.r!=1 else -c3.r]
+    ## compute radius
+    k = 1.0/np.array(rr)
+    r = 1.0/(sum(k) + 2*np.sqrt(k[0]*k[1] + k[1]*k[2] + k[2]*k[0]))
+    ## compute certer
+    rhs = (xx[1]**2 - xx[0]**2) + (yy[1]**2 - yy[0]**2) + (r + rr[0])**2 - (r + rr[1])**2
+    s = -(float(xx[1]) - xx[0])/(yy[1] - yy[0])
+    t = float(rhs)/(2*(yy[1] - yy[0]))
     
-    A = np.empty((3,3))
-    b = np.empty(3)
-    soln = np.empty(3)
-    for i in xrange(3):
-        A[i,0] = 2*(x[(i+1)%3] - x[i])
-        A[i,1] = 2*(y[(i+1)%3] - y[i])
-        A[i,2] = 2*(r[(i+1)%3] - r[i])
-        b[i] = (x[(i+1)%3]**2 - x[i]**2) + (y[(i+1)%3]**2 - y[i]**2) - (r[(i+1)%3]**2 - r[i]**2)
+    a = (1 + s**2)
+    b = 2*s*(t-yy[0]) - 2*xx[0]
+    c = xx[0]**2 + (t - yy[0])**2 - (r + rr[0])**2
     
-    cramer_solver(A,b,soln)
-    return Circle(soln)
+    x1 = (-b + np.sqrt(b**2 - 4*a*c))/(2*a)
+    x2 = (-b - np.sqrt(b**2 - 4*a*c))/(2*a)
+    y1 = s*x1 + t
+    y2 = s*x2 + t
     
-def cramer_solver(A,b,x):
-    denom = det(A)
-    numer = np.empty(3)
-    if denom == 0:
-        print "Equation doens't have unique solution, abort"
-        return 1
-    elif A.shape[0] != np.size(b) or A.shape[0] != np.size(x):
-        print "Flawed input size, abort"
-        return 1
+    #print x1,y1
+    #print x2,y2
+    
+    # Be careful here! You can't test if "==", since they are float numbers!
+    if (x1 - xx[2])**2 + (y1 - yy[2])**2 - (r + rr[2])**2 < 10e-12:
+        x,y = x1,y1
     else:
-        for i in np.size(b):
-            temp = A.copy()
-            temp[:,i] = b
-            numer[i] = det(temp)
-        x = numer/float(denom)
+        x,y = x2,y2
+    
+    return Circle((x,y,r))
 
-def det(A):
-    if np.size(A) == 1:
-        return A
-    elif A.shape[0] != A.shape[1]:
+def reproduce(c1, c2, c3, all_generations, level=0):
+    if level == 0:
+        #return copy.deepcopy(all_generations)
         return 0
     else:
-        result = 0
-        for i in xrange(A.shape[0]):
-            temp = np.delete(A,0,0) # delete Row 0
-            temp = np.delete(A,i,1) # delete Column i
-            result = result + (-1)**(i&1)*A[0,i]*det(temp)
-        return result
-       
+        child = get_circle(c1,c2,c3)
+        all_generations.append((child,level))
+        reproduce(c1,c2,child,all_generations,level-1)
+        reproduce(c1,c3,child,all_generations,level-1)
+        reproduce(c2,c3,child,all_generations,level-1)
 
-if __name__ == '__main__ ':
-    main()
+#if __name__ == '__main__ ':
+#    main()
+#def main():
+# Initialization
+c1 = Circle((0,0,1))
+c2 = Circle((0,4-2*np.sqrt(3), 2*np.sqrt(3)-3))
+c3 = Circle((3-2*np.sqrt(3), np.sqrt(3)-2, 2*np.sqrt(3)-3))
+c4 = Circle((-c3.x, c3.y, c3.r))
+branch_side = [(c1,-1), (c2,0), (c3,0), (c4,0)]
+branch_center = [(c1,-1), (c2,0), (c3,0), (c4,0)]
+area = np.pi*(c1.r**2 + c2.r**2 + c3.r**2 + c4.r**2)
+
+# Run
+level = 2
+#reproduce(c1,c2,c3,branch_side,level)
+reproduce(c2,c3,c4,branch_center,level)
