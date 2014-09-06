@@ -17,3 +17,4 @@ The order of code I've finished:
   * _07/17/2014_: *Problem 67* (4) Similar to Problem 15 -- think bottom up
   * _07/18/2014_: *Problem 69* (2) It's a problem that you only need a calculator to solve
   * _08/07/2014_: *Problem 102* (1): Really easy if you know basic definition of cross product
+  * _09/06/2014_: *Problem 199, 78* (5): I've partially solved Problem 199 -- by looking for reference about Descartes' theorem. It still returns some warning info, which I don't have time to fix for now. For Problem 78 -- it demonstrates that math can be very powerful. Pure dynamic programming simply can't solve it. More work needs to be done
