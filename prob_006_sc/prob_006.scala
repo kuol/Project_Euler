@@ -8,4 +8,5 @@ def sum(n: Int): Long = {
 }
 
 val result = sum(100)*sum(100) - sumOfSquare(100)
-println(s"Result: $result \n")
+//println(s"Result: $result \n")
+println("Result: "+ result + "\n")
