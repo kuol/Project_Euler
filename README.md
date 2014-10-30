@@ -1,5 +1,9 @@
-Project_Euler
+Project Euler
 =============
+
+These exercises are mainly written in python. I'm learning Scala and will put
+more scala code. The directory of excercises that are coded in scala have "_sc"
+surffix
 
 The order of code I've finished:
 
