@@ -10,7 +10,7 @@ def permutation(li, m, n, start=0):
         for i in xrange(start,n):
             li[i], li[start] = li[start], li[i]
             #print li[:m]
-            if check_gon(li[:m]):
+            if check_gon(li[:m]) and 10 not in li[:m]:
                 print li[:m]
             li[i], li[start] = li[start], li[i]
     else:
