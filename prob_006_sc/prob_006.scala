@@ -7,6 +7,7 @@ def sum(n: Int): Long = {
   if (n==1) 1 else n + sum(n-1)
 }
 
-val result = sum(100)*sum(100) - sumOfSquare(100)
+val temp = sum(100)
+val result = temp*temp - sumOfSquare(100)
 //println(s"Result: $result \n")
 println("Result: "+ result + "\n")
