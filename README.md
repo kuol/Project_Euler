@@ -24,3 +24,4 @@ The order of code I've finished:
   * _09/06/2014_: *Problem 199, 78* (5): I've partially solved Problem 199 -- by looking for reference about Descartes' theorem. It still returns some warning info, which I don't have time to fix for now. For Problem 78 -- it demonstrates that math can be very powerful. Pure dynamic programming simply can't solve it. More work needs to be done
  
    *_09/17/2014_: *Problem 6* (1): First scala programming exercise!
+   *_11/10/2014_: *Problem 68* (3): the most difficult part for me is to wirte permutation P(n,k) -- forgot how to do it
