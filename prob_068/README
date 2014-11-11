@@ -1,0 +1,24 @@
+I'm not very proud of the algorithm...but since it solves the problem in < 1 second,
+I probably should write down what I've come up with...
+
+Rules:
+======
+1. The gon is made up with a "core" part([]) and an "arm" part(*), where the core resembles
+   a circular list.  The "gon-rule" is *->[]->[]
+    * * * * *
+    [][][][][]
+2. Once core part of the gon is decided, the arm is also decided. 
+
+What I did:
+===========
+- Write a recurcive algorithm to permute the core, P(10,5) 
+    - in fact P(9,5) is enough since you don't want 10 in the core and to be counted twice. 
+
+- for each permutation, check if it satisfies the gon-rule.  
+
+
+What I hope I could do:
+======================
+1. Make use of the Rotation Symmetricy
+2. Come up with a math rule, so I don't even need to permute
+
