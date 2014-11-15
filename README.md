@@ -25,3 +25,4 @@ The order of code I've finished:
   * _09/17/2014_: *Problem 6* (1): First scala programming exercise!
   * _11/10/2014_: *Problem 68* 5-gon ring(3): the most difficult part for me is to wirte permutation P(n,k) -- forgot how to do it
   * _11/11/2014_: *Problem 85* counting rectangles (2): Pretty straight forward -- use (a+b)>= 2*sqrt(ab) !
+  * _11/14/2014_: *Problem 86* shortest path on a centroid (4): Used Euclid formula to generate primitive Pythagorean triples. 
