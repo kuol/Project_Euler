@@ -28,3 +28,4 @@ The order of code I've finished:
   * _11/14/2014_: *Problem 86* shortest path on a centroid (4): Used Euclid formula to generate primitive Pythagorean triples. 
   * _11/26/2014_: I added about 10 easy problems over the weekend.
   * _11/20/2014_: *Problem 82* Three-way path sum (3): very interesting problem. I'm happy with my solution.
+  * _11/30/2014_: *Problem 83* Four-way path sum (3): got stuck for 2 days, but found it not hard after writing th 5-by-5 example matrix on paper and start to figure it out. I also added several easy problems... 
