@@ -29,3 +29,4 @@ The order of code I've finished:
   * _11/26/2014_: I added about 10 easy problems over the weekend.
   * _11/20/2014_: *Problem 82* Three-way path sum (3): very interesting problem. I'm happy with my solution.
   * _11/30/2014_: *Problem 83* Four-way path sum (3): got stuck for 2 days, but found it not hard after writing th 5-by-5 example matrix on paper and start to figure it out. I also added several easy problems... 
+  * _11/30/2014_: *Problem 12* first triangle with over 500 divisors (2): Not trivial. Notice,triangle numbers shouldn't have very big prime number as divisors. Generate primes first (I only generated primes < 100)
