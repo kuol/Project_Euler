@@ -40,7 +40,7 @@ def sieve_prime(N):
     return sum(a)
 
 # Time is: 0.884902
-# Modified Sieve, only check numbers > p*p
+# Modified Sieve, only check numbers < p*p
 def sieve1_prime(N):
     a = range(2,N+1)
     p = 2
