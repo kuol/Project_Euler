@@ -30,6 +30,7 @@ The order of code I've finished:
   * _11/20/2014_: *Problem 82* Three-way path sum (3): very interesting problem. I'm happy with my solution.
   * _11/30/2014_: *Problem 83* Four-way path sum (3): got stuck for 2 days, but found it not hard after writing th 5-by-5 example matrix on paper and start to figure it out. I also added several easy problems... 
   * _11/30/2014_: *Problem 12* first triangle with over 500 divisors (2): Not trivial. Notice,triangle numbers shouldn't have very big prime number as divisors. Generate primes first (I only generated primes < 100)
+  * _11/30/2014_: *Problem 12* first triangle with over 500 divisors (2): Not trivial. Notice,triangle numbers shouldn't have very big prime number as divisors. Generate primes first (I only generated primes < 100)
   * _12/05/2014_: *Problem 14* max Collatz sequence (2): Brute force is easy to implement, but to be smart, you need to re-use all computed collatz numbers
   * _12/06/2014_: *Problem 205* dice game (3): think carefully for the boundary conditions for the recursion 
-  * _12/06/2014_: *Problem 65* convergent of e (2): understanding the rule, knowing addition of rational numbers is all you need to solve this simple problem. 
+  * _12/07/2014_: *Problem 76* counting summation (3): Very similar to Problem 78, but luckily less computation is needed, thus a dynamic programming is sufficient.
