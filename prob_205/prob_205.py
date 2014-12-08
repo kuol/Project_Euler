@@ -1,6 +1,8 @@
+import time
 def main():
     """compute the probability that Pete beats Collin
     """
+    start = time.time()
     p,c = float(4**9), float(6**6)
     pete = [0.0]*37
     colling = [0.0]*37
@@ -14,7 +16,9 @@ def main():
     prob = sum(collin[6:9])
     for i in xrange(9,36):
         prob += collin[i]*(sum(pete[i+1:]))
+    
 
+    print "Time cost: %f" %(time.time() - start)
     print "The probability that Pete beats Collin is %.7f" %prob
 
 
