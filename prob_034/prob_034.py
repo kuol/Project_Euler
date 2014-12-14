@@ -1,8 +1,6 @@
 from math import factorial
 
 def main():
-    x = test_curious(2,if_curious,range(6),[5])
-
     a = [factorial(i) for i in xrange(10)]
     result = []
     for d in xrange(3,8):
@@ -16,7 +14,7 @@ def main():
             if k_max == 9:
                 break
         
-        # Find smallest possible digit that has to be there
+       # Find smallest possible digit that has to be there
         k_min = k_max
         while a[k_min - 1]*d > lower:
             k_min -= 1
@@ -47,7 +45,6 @@ def if_curious(a):
         n += fact[x]
     m = list(str(n))
     m = [int(x) for x in m]
-    f = lambda x: x in a
     
     a.sort()
     m.sort()
