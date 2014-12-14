@@ -34,3 +34,4 @@ The order of code I've finished:
   * _12/05/2014_: *Problem 14* max Collatz sequence (2): Brute force is easy to implement, but to be smart, you need to re-use all computed collatz numbers
   * _12/06/2014_: *Problem 205* dice game (3): think carefully for the boundary conditions for the recursion 
   * _12/07/2014_: *Problem 76* counting summation (3): Very similar to Problem 78, but luckily less computation is needed, thus a dynamic programming is sufficient.
+  * _12/13/2014_: *Problem 34* digit factorials (3): Similar to Problem 30, but much harder. 1) has to less than 8 digits, 2) what numbers do thoses factorial digits make?
