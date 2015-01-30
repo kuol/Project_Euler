@@ -38,4 +38,4 @@ The order of code I've finished:
   * _12/20/2014_: *Problem 26* Fraction to decimal (2): pretty straight forward 
   * _01/28/2015_: *Problem 21* Amicable numbers (2): no trick problem 
   * _01/30/2015_: *Problem 41* Pandigital primes (3): need to code permutation with recursion  
- 
+  * _01/30/2015_: *Problem 43* Pandigital substring divisibility (3): small modification based on Problem 41.
