@@ -37,4 +37,5 @@ The order of code I've finished:
   * _12/13/2014_: *Problem 39* integer right angle sum (2): Similar to 75,86
   * _12/20/2014_: *Problem 26* Fraction to decimal (2): pretty straight forward 
   * _01/28/2015_: *Problem 21* Amicable numbers (2): no trick problem 
+  * _01/30/2015_: *Problem 41* Pandigital primes (3): need to code permutation with recursion  
  
