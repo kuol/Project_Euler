@@ -26,22 +26,23 @@ def permute(l, primes, m=0, a=[]):
         The list that stores all pandigital prime numbers that satisfy the
         substring divisibility rule.
     """
-    n = len(l)
-    if m < n-1:
-        for i in xrange(m,n):
-            l[m], l[i] = l[i], l[m]
-            permute(l, primes, m+1, a)
-            l[m], l[i] = l[i], l[m]
-    elif l[0]:
-        for i in xrange(1,8):
-            M = l[i]*100 + l[i+1]*10 + l[i+2]
-            if M%primes[i-1]:
-                break
-            elif i==7:
-                N = 0 
-                for j in xrange(10):
-                    N += l[9-j] * 10**j
-                a.append(N)
+    if not(m>0 and l[0]==0):
+        n = len(l)
+        if m < n-1:
+            for i in xrange(m,n):
+                l[m], l[i] = l[i], l[m]
+                permute(l, primes, m+1, a)
+                l[m], l[i] = l[i], l[m]
+        elif l[0]:
+            for i in xrange(1,8):
+                M = l[i]*100 + l[i+1]*10 + l[i+2]
+                if M%primes[i-1]:
+                    break
+                elif i==7:
+                    N = 0 
+                    for j in xrange(10):
+                        N += l[9-j] * 10**j
+                    a.append(N)
     return a
 
 
