@@ -42,3 +42,4 @@ The order of code I've finished:
   * _01/30/2015_: *Problem 38* Pandigital substring divisibility (1): very easy one.
   * _01/30/2015_: *Problem 32* Pandigital multiply (1): very easy one.
   * _01/30/2015_: *Problem 71* Ordered fractions (2): for each possible denominator, what is the possible numerator?
+  * _02/26/2015_: *Problem 23* Abundant numbers (3): Find a bug for prime number generator, learned variable nested loop. 
