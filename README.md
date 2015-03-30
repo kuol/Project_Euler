@@ -44,3 +44,5 @@ The order of code I've finished:
   * _01/30/2015_: *Problem 71* Ordered fractions (2): for each possible denominator, what is the possible numerator?
   * _02/26/2015_: *Problem 23* Abundant numbers (3): Find a bug for prime number generator, learned variable nested loop. 
   * _03/28/2015_: *Problem 44* Pentagonal pairs (3): I don't know much math in the problem, the solution is not very perfect. 
+  * _03/29/2015_: *Problem 92* Square digit chain (3): Not very fast... 50 s....
+  * _03/29/2015_: *Problem 57* Square root convergents (2): Fix point iteration, once figure out the iteration formula, everything is easy.
