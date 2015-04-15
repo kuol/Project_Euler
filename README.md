@@ -46,3 +46,4 @@ The order of code I've finished:
   * _03/28/2015_: *Problem 44* Pentagonal pairs (3): I don't know much math in the problem, the solution is not very perfect. 
   * _03/29/2015_: *Problem 92* Square digit chain (3): Not very fast... 50 s....
   * _03/29/2015_: *Problem 57* Square root convergents (2): Fix point iteration, once figure out the iteration formula, everything is easy.
+  * _04/14/2015_: *Problem 72* Counting Fractions (3): Not familiar with totient function is the big obstacle. 
