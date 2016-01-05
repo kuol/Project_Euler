@@ -47,3 +47,4 @@ The order of code I've finished:
   * _03/29/2015_: *Problem 92* Square digit chain (3): Not very fast... 50 s....
   * _03/29/2015_: *Problem 57* Square root convergents (2): Fix point iteration, once figure out the iteration formula, everything is easy.
   * _04/14/2015_: *Problem 72* Counting Fractions (3): Not familiar with totient function is the big obstacle. 
+  * _01/04/2016_: *Problem 27* Quadratic primes (2): quite simple.
